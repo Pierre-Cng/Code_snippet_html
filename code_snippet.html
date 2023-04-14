@@ -31,19 +31,19 @@
         cursor: pointer;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 500px) {
         textarea{
-            height: 4em; 
+            height: 5em; 
         }
 </style>
 
 <body>
     <label for="snippet">
-        Language
+        Git bash
         <button class="copy-btn" onclick="copy()">📋 Copy code</button>
     </label>
 
-    <textarea id="snippet" rows="1" readonly>code snippet</textarea>
+    <textarea id="snippet" rows="1" readonly>git clone https://github.com/Pierre-Cng/cpp_template.git</textarea>
 
     <script>
         function copy() 
