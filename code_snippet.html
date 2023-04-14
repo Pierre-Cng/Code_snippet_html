@@ -1,36 +1,41 @@
 <style>
-label {
-    display: block;
-    background-color: #343541;
-    color: #d9d9e3;
-    border-radius: 5px 5px 0px 0px; 
-    box-shadow: 1px 1px 1px grey;
-    padding: 10px; 
-}
+    label {
+        display: block;
+        background-color: #343541;
+        color: #d9d9e3;
+        border-radius: 5px 5px 0px 0px; 
+        box-shadow: 1px 1px 1px grey;
+        padding: 10px; 
+        width: 100%;
+    }
 
-.copy-btn 
-{
-    border: none;
-    background: none;
-    float: right;
-    color: #d9d9e3;
-}
+    .copy-btn {
+        border: none;
+        background: none;
+        float: right;
+        color: #d9d9e3;
+    }
 
-textarea {
-    background-color: black;
-    font-family: "Courier New", Courier, monospace;
-    color: white;
-    padding: 10px;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 1px 1px 1px grey ;
-    resize: none;
-    width: 100%;
-    overflow: hidden;
-}
+    textarea {
+        background-color: black;
+        font-family: "Courier New", Courier, monospace;
+        color: white;
+        padding: 10px;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: 1px 1px 1px grey;
+        resize: none;
+        width: 100%;
+        overflow: hidden;
+    }
 
-.copy-btn:hover {
-    cursor: pointer;
-}
+    .copy-btn:hover {
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width: 600px) {
+        textarea{
+            height: 2em; 
+        }
 </style>
 
 <body>
