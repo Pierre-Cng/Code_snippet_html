@@ -1,0 +1,43 @@
+<style>
+    .code-snippet {
+        background-color: #f5f5f5;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1em;
+        padding: 10px;
+        position: relative;
+    }
+
+    .copy-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Hide the button until the user hovers over the code snippet */
+    .code-snippet:hover .copy-btn {
+        display: block;
+    }
+</style>
+
+<section class="code-snippet">
+  <button class="copy-btn" onclick="copyCode()">Copy</button>
+  <code id="code">git clone address</code>
+</section>
+
+<script>
+    function copyCode() {
+        const code = document.getElementById("code");
+        const text = code.innerText;
+
+        // Create a temporary textarea element to copy the text to the clipboard
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = text;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+
+        // Show a confirmation message to the user
+        alert("Code copied to clipboard!");
+    }
+</script>
